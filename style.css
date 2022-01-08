@@ -1,35 +1,98 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1b1b1b;
+}
+li,
+a,
+button {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
 }
 
-nav {
-  position: fixed;
+header {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  padding-top: 5px;
-  height: 80px;
-  width: 100%;
-  background-color: darkslategrey;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 20px 10%;
+}
+.logo {
+  cursor: pointer;
+  max-height: 40px;
 }
 .menu {
   list-style: none;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  color: white;
 }
-.menu-item {
-  padding-left: 20px;
-  padding-right: 20px;
+.menu li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.menu li a {
+  transition: all 0.3s ease 0s;
 }
 
-.games {
+.menu li a:hover {
+  color: grey;
 }
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: darkslategray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+button {
+  padding: 9px 25px;
+  background-color: rgb(112, 153, 112, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.buy {
+  margin-left: auto;
+}
+
+button:hover {
+  background-color: rgb(112, 153, 112, 0.8);
+}
+
 .arrow {
   border: solid white;
   border-width: 0 1px 1px 0;
@@ -43,78 +106,88 @@ nav {
   -webkit-transform: rotate(45deg);
 }
 
-.navbar {
-  overflow: hidden;
-  background-color: #333;
+.hero-container {
+  position: relative;
+  width: 100%;
 }
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 31px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.dropdown-content {
-  display: none;
-  left: 0;
-  right: 0;
+.center {
   position: absolute;
-  background-color: darkslategrey;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-top: solid 1px rgb(204, 204, 204);
-  z-index: 1;
+  top: 30px;
+  width: 50%;
+  margin: 0 25% 0 25%;
+  padding: 40px 0px 40px 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  opacity: 0.7;
+  font-size: 40px;
 }
 
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: rgb(31, 43, 43);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.News {
-}
-
-.support {
-  margin-left: auto;
-}
-.logo {
-  height: 75px;
-}
 .hero {
-  max-width: 100%;
-  overflow: hidden;
+  width: 100%;
+  height: auto;
 }
-.game-stuff {
-  height: 1000px;
+
+#news-sky-1 {
+  background-image: url(Stars.jpg);
+  max-width: 100%;
+}
+.news-sky {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.news-container {
+  margin: auto;
+  padding: 40px 0;
+  max-width: 1279px;
+}
+
+.news-header-sky {
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 2.25rem;
+  margin: 0 0 30px;
+  padding: 20px 0 0;
+  position: relative;
+  width: 100%;
+  max-width: 1279;
+}
+
+.news-items-sky {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.news-item {
+  flex: 1 1 30%;
+  margin-right: 10px;
+  padding-bottom: 30px;
+}
+
+.image-link {
+  cursor: pointer;
+  display: block;
+  height: auto;
+  margin-bottom: 20px;
+  position: relative;
+  transition: 300ms ease;
+}
+.image-link:hover {
+  opacity: 0.6;
+}
+.news-image {
+  width: 412px;
+  height: 250px;
+}
+.news-item-content {
+  color: white;
+}
+.read-more {
+  text-decoration: underline;
+  font-weight: bold;
 }
