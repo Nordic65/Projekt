@@ -19,18 +19,19 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px 10%;
+  padding: 0px 10%;
 }
 .logo {
   cursor: pointer;
   max-height: 40px;
+  max-width: auto;
 }
 .menu {
   list-style: none;
 }
 .menu li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 20px 20px;
 }
 .menu li a {
   transition: all 0.3s ease 0s;
@@ -56,10 +57,14 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
+  margin-top: 20px;
+  left: 0;
+  right: 0;
   background-color: darkslategray;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-top: white solid 2px;
 }
 
 .dropdown-content a {
@@ -67,7 +72,7 @@ li.dropdown {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: left;
+  text-align: center;
 }
 
 .dropdown-content a:hover {
@@ -105,28 +110,58 @@ button:hover {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-
-.hero-container {
-  position: relative;
-  width: 100%;
+.burgerbtn {
+  display: none;
 }
+@media screen and (max-width: 1030px) {
+  .burgerbtn {
+    display: block;
+  }
 
-.center {
-  position: absolute;
-  top: 30px;
-  width: 50%;
-  margin: 0 25% 0 25%;
-  padding: 40px 0px 40px 0;
-  text-align: center;
-  background-color: black;
-  color: white;
-  opacity: 0.7;
-  font-size: 40px;
-}
+  a,
+  .dropbtn {
+    display: inline-block;
+    color: white;
+  }
 
-.hero {
-  width: 100%;
-  height: auto;
+  .dropdown {
+    display: inline-block;
+    margin-left: auto;
+    padding: 20px 0;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: darkslategray;
+    min-width: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 20px;
+    border-top: white solid 2px;
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+  .dropdown-content a:hover {
+    background-color: black;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .menu,
+  .buy {
+    display: none;
+  }
 }
 
 #news-sky-1 {
@@ -186,8 +221,68 @@ button:hover {
 }
 .news-item-content {
   color: white;
+  width: 412px;
 }
 .read-more {
   text-decoration: underline;
   font-weight: bold;
+}
+/*---------------------welcome page ----------------------------*/
+#welcome-sky-1 {
+  background-image: url(Skyrim-Hero3.jpg);
+  width: 100%;
+}
+.welcome-sky {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.welcome-container-sky {
+  margin: auto;
+  padding: 80px 0;
+  max-width: 1279px;
+}
+.welcome-main-sky {
+  padding: 40px 0;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+  opacity: 0.7;
+}
+.welcome-item-sky {
+  flex: 1 1 30%;
+  margin-right: 10px;
+  padding-bottom: 30px;
+  color: white;
+  font-size: 40px;
+}
+
+/*---------------------------*/
+@media screen and (max-width: 1285px) {
+  .news-items-sky {
+    flex-direction: column;
+  }
+  .news-item {
+    flex: 1 1 100%;
+    margin: 0px 20px;
+  }
+  .news-image {
+    width: 100%;
+    height: auto;
+  }
+  .news-item-content {
+    width: 100%;
+    height: auto;
+  }
+  .news-header-sky {
+    font-size: 2rem;
+    line-height: 1.75rem;
+    margin: 0 0 30px;
+    padding: 20px 20px 0;
+    position: relative;
+    width: 100%;
+    max-width: 1279;
+  }
 }
