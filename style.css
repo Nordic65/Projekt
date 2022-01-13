@@ -31,7 +31,7 @@ header {
 }
 .menu li {
   display: inline-block;
-  padding: 20px 20px;
+  padding: 0px 20px;
 }
 .menu li a {
   transition: all 0.3s ease 0s;
@@ -46,7 +46,7 @@ li a,
   display: inline-block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 30px 16px;
   text-decoration: none;
 }
 
@@ -57,11 +57,9 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  margin-top: 20px;
   left: 0;
   right: 0;
   background-color: darkslategray;
-  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-top: white solid 2px;
@@ -84,18 +82,19 @@ li.dropdown {
 }
 button {
   padding: 9px 25px;
-  background-color: rgb(112, 153, 112, 1);
+  background-color: rgba(39, 51, 51, 1);
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
-.buy {
+.loginbtn {
   margin-left: auto;
+  margin-right: 20px;
 }
 
 button:hover {
-  background-color: rgb(112, 153, 112, 0.8);
+  background-color: rgba(39, 51, 51, 0.7);
 }
 
 .arrow {
@@ -113,9 +112,11 @@ button:hover {
 .burgerbtn {
   display: none;
 }
-@media screen and (max-width: 1030px) {
+
+@media screen and (max-width: 1185px) {
   .burgerbtn {
     display: block;
+    font-size: 30px;
   }
 
   a,
@@ -134,7 +135,6 @@ button:hover {
     display: none;
     position: absolute;
     background-color: darkslategray;
-    min-width: 100%;
     left: 0;
     right: 0;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -158,12 +158,81 @@ button:hover {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  .loginbtn {
+    margin-right: 0;
+  }
   .menu,
-  .buy {
+  .buy,
+  .loginbtn {
     display: none;
   }
 }
+/*---------------------welcome page ----------------------------*/
+#welcome-sky-1 {
+  background-image: url(Skyrim-Hero3.jpg);
+  width: 100%;
+}
+.welcome-sky {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.welcome-container-sky {
+  margin: auto;
+  padding: 80px 0;
+  max-width: 1279px;
+}
+.welcome-main-sky {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+  opacity: 0.7;
+}
 
+.welcome-item-sky {
+  flex: 1 1 30%;
+  padding-bottom: 30px;
+  color: white;
+  font-size: 40px;
+}
+
+/*-----------Welcome laptop----------------*/
+@media screen and (max-width: 1285px) {
+  .welcome-container-sky {
+    padding: 60px 0;
+  }
+  .welcome-main-sky {
+    padding: 20px 0;
+  }
+  .welcome-item-sky {
+    font-size: 30px;
+  }
+}
+/*-----------Welcome phone----------------*/
+@media screen and (max-width: 500px) {
+  header {
+    padding: 0 5%;
+  }
+  .logo {
+    max-height: 30px;
+  }
+  .burgerbtn {
+    display: block;
+    font-size: 25px;
+  }
+  .welcome-container-sky {
+    padding: 20px 0;
+  }
+  .welcome-main-sky {
+    padding: 0;
+  }
+  .welcome-item-sky {
+    font-size: 30px;
+  }
+}
+/*------------------News--------------------*/
 #news-sky-1 {
   background-image: url(Stars.jpg);
   max-width: 100%;
@@ -200,7 +269,7 @@ button:hover {
 
 .news-item {
   flex: 1 1 30%;
-  margin-right: 10px;
+  margin: 0 5px;
   padding-bottom: 30px;
 }
 
@@ -227,46 +296,17 @@ button:hover {
   text-decoration: underline;
   font-weight: bold;
 }
-/*---------------------welcome page ----------------------------*/
-#welcome-sky-1 {
-  background-image: url(Skyrim-Hero3.jpg);
-  width: 100%;
-}
-.welcome-sky {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.welcome-container-sky {
-  margin: auto;
-  padding: 80px 0;
-  max-width: 1279px;
-}
-.welcome-main-sky {
-  padding: 40px 0;
 
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  background-color: black;
-  opacity: 0.7;
-}
-.welcome-item-sky {
-  flex: 1 1 30%;
-  margin-right: 10px;
-  padding-bottom: 30px;
-  color: white;
-  font-size: 40px;
-}
-
-/*---------------------------*/
+/*---------------News laptop------------*/
 @media screen and (max-width: 1285px) {
   .news-items-sky {
     flex-direction: column;
+    justify-content: center;
   }
   .news-item {
     flex: 1 1 100%;
-    margin: 0px 20px;
+    margin: 0px auto;
+    max-width: 800px;
   }
   .news-image {
     width: 100%;
@@ -284,5 +324,84 @@ button:hover {
     position: relative;
     width: 100%;
     max-width: 1279;
+  }
+}
+/*----------------Login---------------*/
+.login {
+  background-color: white;
+  width: 100%;
+  height: auto;
+}
+
+.login-container {
+  padding: 80px 0;
+  margin: auto;
+  max-width: 1000px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.login-form {
+  padding: 0 80px;
+  margin: auto;
+}
+.login-header {
+  font-size: 2.5rem;
+  line-height: 2.25rem;
+  margin: 0 0 30px;
+  padding: 20px 0 0;
+  position: relative;
+  width: 100%;
+  max-width: 1279;
+}
+
+.login-item {
+  padding: 0 40px;
+}
+#email {
+  margin-bottom: 20px;
+}
+.login-link {
+  display: block;
+  color: black;
+  padding: 10px 0;
+}
+/*---------------footer---------------*/
+.footer-container {
+  background-color: #1b1b1b;
+  padding-bottom: 50px;
+}
+.footer {
+  width: 80%;
+  height: 25vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.footer-heading {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
+}
+
+.footer-heading h2 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.footer-heading a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.footer-heading a:hover {
+  color: grey;
+  transition: 0.3s ease;
+}
+
+@media screen and (max-width: 630px) {
+  .footer-3 {
+    display: none;
   }
 }
