@@ -167,6 +167,7 @@ button:hover {
     display: none;
   }
 }
+/*--------------------Start skyrim--------------------------*/
 /*---------------------welcome page ----------------------------*/
 #welcome-sky-1 {
   background-image: url(Skyrim-Hero3.jpg);
@@ -326,18 +327,189 @@ button:hover {
     max-width: 1279;
   }
 }
+/*-------------Start oblivion------------------*/
+/*------------welcome oblivion------------------*/
+#welcome-obl-1 {
+  background-image: url(Oblivion.png);
+  width: 100%;
+}
+.welcome-sky {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.welcome-container-sky {
+  margin: auto;
+  padding: 80px 0;
+  max-width: 1279px;
+}
+.welcome-main-sky {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.welcome-item-sky {
+  flex: 1 1 30%;
+  padding-bottom: 30px;
+  color: white;
+  font-size: 40px;
+}
+
+/*-----------Welcome laptop----------------*/
+@media screen and (max-width: 1285px) {
+  .welcome-container-sky {
+    padding: 60px 0;
+  }
+  .welcome-main-sky {
+    padding: 20px 0;
+  }
+  .welcome-item-sky {
+    font-size: 30px;
+  }
+}
+/*-----------Welcome phone----------------*/
+@media screen and (max-width: 500px) {
+  header {
+    padding: 0 5%;
+  }
+  .logo {
+    max-height: 30px;
+  }
+  .burgerbtn {
+    display: block;
+    font-size: 25px;
+  }
+  .welcome-container-sky {
+    padding: 20px 0;
+  }
+  .welcome-main-sky {
+    padding: 0;
+  }
+  .welcome-item-sky {
+    font-size: 30px;
+  }
+}
+/*------------------News--------------------*/
+#news-sky-1 {
+  background-image: url(Stars.jpg);
+  max-width: 100%;
+}
+.news-sky {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.news-container {
+  margin: auto;
+  padding: 40px 0;
+  max-width: 1279px;
+}
+
+.news-header-sky {
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 2.25rem;
+  margin: 0 0 30px;
+  padding: 20px 0 0;
+  position: relative;
+  width: 100%;
+  max-width: 1279;
+}
+
+.news-items-sky {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.news-item {
+  flex: 1 1 30%;
+  margin: 0 5px;
+  padding-bottom: 30px;
+}
+
+.image-link {
+  cursor: pointer;
+  display: block;
+  height: auto;
+  margin-bottom: 20px;
+  position: relative;
+  transition: 300ms ease;
+}
+.image-link:hover {
+  opacity: 0.6;
+}
+.news-image {
+  width: 412px;
+  height: 250px;
+}
+.news-item-content {
+  color: white;
+  width: 412px;
+}
+.read-more {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/*---------------News laptop------------*/
+@media screen and (max-width: 1285px) {
+  .news-items-sky {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .news-item {
+    flex: 1 1 100%;
+    margin: 0px auto;
+    max-width: 800px;
+  }
+  .news-image {
+    width: 100%;
+    height: auto;
+  }
+  .news-item-content {
+    width: 100%;
+    height: auto;
+  }
+  .news-header-sky {
+    font-size: 2rem;
+    line-height: 1.75rem;
+    margin: 0 0 30px;
+    padding: 20px 20px 0;
+    position: relative;
+    width: 100%;
+    max-width: 1279;
+  }
+}
+/*--------------Start mirrorwind--------------*/
+#welcome-mir-1 {
+  background-image: url(Mirrorwind.jpg);
+  width: 100%;
+}
+/*----------------Start Home----------------*/
+#welcome-elsc-1 {
+  background-image: url(Elder-scrolls-hero.jpg);
+  width: 100%;
+}
 /*----------------Login---------------*/
+
 .login {
   background-color: white;
   max-width: 100%;
-  height: 60vh;
+  height: auto;
   display: flex;
 }
 
 .login-container {
   height: auto;
   padding: 0;
-  margin: auto;
+  margin: 80px auto;
   max-width: 500px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   justify-content: center;
@@ -364,6 +536,10 @@ button:hover {
 #email {
   margin-bottom: 20px;
 }
+#email,
+#password {
+  padding: 10px 0;
+}
 .login-link {
   display: block;
   color: black;
@@ -372,6 +548,9 @@ button:hover {
 input[type="text"] {
   border: none;
   border-bottom: black solid 2px;
+}
+input[type="text"]:focus {
+  outline: none;
 }
 input[type="submit"] {
   margin-bottom: 30px;
@@ -405,7 +584,7 @@ input[type="submit"] {
   .login-container {
     height: auto;
     padding: 0;
-    margin: auto;
+    margin: 20px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     justify-content: center;
     align-items: center;
@@ -413,6 +592,9 @@ input[type="submit"] {
   input[type="submit"] {
     margin-bottom: 30px;
     padding: 15px;
+  }
+  .bethesda-logo-login {
+    margin-bottom: 10px;
   }
 }
 /*---------------footer---------------*/
