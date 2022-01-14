@@ -600,7 +600,13 @@ input[type="text"]:focus {
 }
 input[type="submit"] {
   margin-bottom: 30px;
-  padding: 15px;
+  padding: 15px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
 }
 .bethesda-logo-login {
   max-width: 100%;
@@ -636,9 +642,9 @@ input[type="submit"] {
     align-items: center;
   }
   input[type="submit"] {
-    margin-bottom: 30px;
-    padding: 15px;
-  }
+  padding: 10px 15px;
+  font-size: 14px;
+}
   .bethesda-logo-login {
     margin-bottom: 10px;
   }
